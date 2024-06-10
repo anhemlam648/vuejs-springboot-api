@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Trang Chủ</h1>
-    <div id="news">
+    <h1 style="margin-left: 120px; text-align:center;">Trang Chủ</h1>
+    <div id="news" style="margin-left: 180px;">
       <p>{{ title }}</p>
       <p>{{ content }}</p>
         <img :src="image" alt="News Image">
@@ -56,3 +56,8 @@ export default {
   }
 }
 </script>
+<style>
+.news {
+  margin-left:500px;
+}
+</style>
