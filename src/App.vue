@@ -5,7 +5,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/hellword">Hello</router-link>
-      <router-link to="/product">Product</router-link>
+      <router-link to="/listnews">ListNews</router-link>
     </nav>
     <router-view></router-view>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->

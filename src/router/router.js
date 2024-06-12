@@ -20,8 +20,8 @@ const routes =[
         component: Helloword
     },
     {
-        path:'/product',
-        name:'Product',
+        path:'/listnews',
+        name:'News',
         component: ListProduct
     }
 ]
