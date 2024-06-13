@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1 style="margin-left: 120px; text-align:center;">Trang Chủ</h1>
-    <div id="news" style="margin-left: 180px;">
-      <p>{{ title }}</p>
-      <p>{{ content }}</p>
-        <img :src="image" alt="News Image">
+    <h1 style="text-align:center;">Trang Chủ</h1>
+    <div id="news">
+      <p style="text-align:center;">{{ title }}</p>
+      <p style="text-align:center;">{{ content }}</p>
+      <img :src="image" alt="News Image" style="width:500px;display: block; margin: 20px auto;">
     </div>
   </div>
 </template>

@@ -1,24 +1,19 @@
 <template>
   <div id="app">
-    <nav>
-        <!-- Sử dụng các route-link cho url-->
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/hellword">Hello</router-link>
-      <router-link to="/listnews">ListNews</router-link>
-    </nav>
+    <Header />
     <router-view></router-view>
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <Footer />
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-
+import Header from './components/partials/HeaderUser';
+import Footer from './components/partials/FooterUser';
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    Header,
+    Footer
   }
 }
 </script>
