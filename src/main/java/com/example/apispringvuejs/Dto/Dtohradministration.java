@@ -1,6 +1,6 @@
-package com.example.apispringvuejs.Entity;
+package com.example.apispringvuejs.Dto;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,46 +8,31 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 @Entity
-@Table(name = "hradministrations")
-public class HrAdministration {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Dtohradministration {
+
     private Long id;
-
     private String title;
-
     private String description;
-
-    @Column(name = "content", length = 1500)
     private String content;
-
-    @OneToOne
-    @JoinColumn (name = "category_hradministration")
-    private CategoryHrAdministration categoryHrAdministration;
-
-    @Lob
-    @Column(columnDefinition = "TEXT")
     private String image;
-
+    private Long categoryHrAdministration;
     private LocalDateTime createAt;
-
     private LocalDateTime updateAt;
-
 
     @Override
     public String toString() {
-        return "HrAdministration{" +
+        return "Dtohradministration{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", content='" + content + '\'' +
-                ", categoryHrAdministration=" + categoryHrAdministration +
                 ", image='" + image + '\'' +
+                ", categoryHrAdministration=" + categoryHrAdministration +
                 ", createAt=" + createAt +
                 ", updateAt=" + updateAt +
                 '}';

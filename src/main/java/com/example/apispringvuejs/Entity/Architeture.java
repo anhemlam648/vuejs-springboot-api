@@ -23,6 +23,10 @@ public class Architeture {
 
     private String description;
 
+    @Lob
+    @Column(columnDefinition = "TEXT")
+    private String image;
+
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
@@ -31,13 +35,13 @@ public class Architeture {
     private String content;
 
 
-
     @Override
     public String toString() {
         return "Architeture{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 ", content='" + content + '\'' +

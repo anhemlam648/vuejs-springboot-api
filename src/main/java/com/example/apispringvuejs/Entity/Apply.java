@@ -26,9 +26,14 @@ public class Apply {
     @Column(name="content", length = 1500)
     private String content;
 
+    @Lob
+    @Column(columnDefinition = "TEXT")
+    private String image;
+
     private LocalDateTime createAt;
 
     private LocalDateTime updateAt;
+
 
     @Override
     public String toString() {
@@ -37,6 +42,7 @@ public class Apply {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", content='" + content + '\'' +
+                ", image='" + image + '\'' +
                 ", createAt=" + createAt +
                 ", updateAt=" + updateAt +
                 '}';
