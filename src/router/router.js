@@ -4,6 +4,7 @@ import About from '../components/AboutPage.vue'
 import HrAdministration from'../components/HrAdministration.vue'
 import Architeture from '../components/Architeture.vue'
 import Apply from '../components/Apply.vue'    
+import Login from '../components/Login.vue'
 const routes =[
     {
         path: '/',
@@ -34,6 +35,11 @@ const routes =[
         path:'/apply',
         name:'Internapply',
         component: Apply
+    },
+    {
+        path:'/login',
+        name: 'Login',
+        component: Login
     }
 ]
 const router = createRouter({

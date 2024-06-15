@@ -1,19 +1,28 @@
+<!-- src/App.vue -->
 <template>
   <div id="app">
-    <Header />
+    <Header v-if="showHeaderFooter" />
     <router-view></router-view>
-    <Footer />
+    <Footer v-if="showHeaderFooter" />
   </div>
 </template>
 
 <script>
 import Header from './components/partials/HeaderUser';
 import Footer from './components/partials/FooterUser';
+
+
 export default {
   name: 'App',
   components: {
     Header,
-    Footer
+    Footer,
+  },
+  computed: {
+    showHeaderFooter() {
+      // kiểm tra có hiển thị header và footer ở trang login Không 
+      return this.$route.path !== '/login';
+    }
   }
 }
 </script>

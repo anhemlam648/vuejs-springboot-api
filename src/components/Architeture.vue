@@ -26,6 +26,18 @@ export default {
       window.location.href = "https://hanhchinhnhansu.edu.vn/";
     }
   },
+  mounted(){
+    let setImage = 0;
+    const images = [
+        "https://hanhchinhnhansu.edu.vn/wp-content/uploads/2024/05/Dang-Ky-Khoa-Hoc-Hanh-Chinh.jpg",
+        "https://hanhchinhnhansu.edu.vn/wp-content/uploads/2024/06/Hanh-Chinh-Nhan-Su.jpg"
+    ]
+    setInterval(() =>{
+      const currentImage = (setImage + 1) % images.length;
+      this.image = images[currentImage];
+      setImage = currentImage;
+    },3000);
+  }
 };
 </script>
 
