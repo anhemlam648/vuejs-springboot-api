@@ -5,6 +5,7 @@ import HrAdministration from'../components/HrAdministration.vue'
 import Architeture from '../components/Architeture.vue'
 import Apply from '../components/Apply.vue'    
 import Login from '../components/Login.vue'
+import HomeAdmin from'../components/admin/HomeAdmin.vue'
 const routes =[
     {
         path: '/',
@@ -40,6 +41,11 @@ const routes =[
         path:'/login',
         name: 'Login',
         component: Login
+    },
+    {
+        path:'/admin',
+        name:'HomeAdmin',
+        component:HomeAdmin
     }
 ]
 const router = createRouter({
