@@ -1,6 +1,6 @@
 <template>
   <footer class="footer-admin">
-    <p>{{ title }}</p>
+    <p style="color:#FFFFFF;">{{ title }}</p>
   </footer>
 </template>
 

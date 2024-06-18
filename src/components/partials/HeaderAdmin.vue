@@ -8,7 +8,7 @@
       <h1 style="margin-top: -40px; color: #FFFFFF;">Quản lý Menu</h1>
       <hr style="background-color: #FFFFFF;">
       <router-link to="/admin" class="sidebar-link" style="color: #33FFFF;">🏠 Trang Chủ</router-link>
-      <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">📂 ListHrAdmin</router-link>
+      <router-link to="/adminlisthr" class="sidebar-link" style="color: #FFFF00;">📂 ListHrAdmin</router-link>
       <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">📂 ListCategory</router-link>
       <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">📂 ListAchiterture</router-link>
       <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">📂 ListApply</router-link>
