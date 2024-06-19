@@ -11,7 +11,7 @@
       <router-link to="/adminlisthr" class="sidebar-link" style="color: #FFFF00;">📂 ListHrAdmin</router-link>
       <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">📂 ListCategory</router-link>
       <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">📂 ListAchiterture</router-link>
-      <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">📂 ListApply</router-link>
+      <router-link to="/adminlistapply" class="sidebar-link" style="color: #FFFF00;">📂 ListApply</router-link>
       <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">👩‍💼 ListUser</router-link>
     </nav>
     <div :class="['overlay', { 'overlay-show': isSidebarOpen }]" @click="toggleSidebar"></div>
