@@ -1,39 +1,34 @@
 <template>
-    <div class="home-apply">
-      <HeaderAdmin />
-        <div class ="list-apply">
+    <div class="home-architeture">
+        <HeaderAdmin />
+        <div class="list-architeture">
             <h1>{{ title }}</h1>
             <p>{{ content }}</p>
-            <img :src ="image" alt ="để tạm để phân biệt trang" class ="image" style="width:500px;">
+            <img :src ="image" alt = "để tạm trang list kiến thức" class ="image" style="width:500px;">
         </div>
-      <FooterAdmin />
+        <FooterAdmin />
     </div>
 </template>
 <script>
-import HeaderAdmin from '../partials/HeaderAdmin';
-import FooterAdmin from '../partials/FooterAdmin';
-export default{
-    name: "ListApply",
+import HeaderAdmin from '../partials/HeaderAdmin'
+import FooterAdmin from '../partials/FooterAdmin'
+export default {
+    name:"ListArchiteture",
     components:{
         HeaderAdmin,
         FooterAdmin
     },
     data(){
-        return {
-            title: "Trang quản lý danh sách tuyển dụng",
-            content:"Tuyển dụng hành chính nhân sự 2024",
-            image:"https://hanhchinhnhansu.edu.vn/wp-content/uploads/2024/06/Quan-Ly-Nhan-Su.jpg"
+        return{
+            title:"Kiến Thức về hành chính nhân sự",
+            content:"Tài liệu về hành chính nhân sự",
+            image:"https://hanhchinhnhansu.edu.vn/wp-content/uploads/2024/06/Gioi-Thieu-Nang-Cao-Quan-Ly-Nhan-Su.jpg"
         };
-    },
-    mounted() {
-        setTimeout(() =>{
-            this.image = "https://hanhchinhnhansu.edu.vn/wp-content/uploads/2024/06/Quy-Dinh-Ve-Quan-Ly-Ho-So.jpg"
-        },3000);
     }
 }
 </script>
 <style>
-.home-apply{
+.home-architeture{
   display: flex;
   flex-direction: column;
   height:100%;
@@ -52,7 +47,7 @@ export default{
   font-size: 18px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
-.list-apply{
+.list-architeture{
   flex: 1;
   padding: 100px 20px 20px; 
   margin: 20px auto;
@@ -64,14 +59,14 @@ export default{
   max-width: 100%; 
   overflow: hidden;
 }
-.list-apply h1{
+.list-architeture h1{
   color: #004080;
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: bold;
   text-align:center;
 }
-.list-apply p{
+.list-architeture p{
   color: #333;
   font-size: 16px;
   line-height: 1.6; 

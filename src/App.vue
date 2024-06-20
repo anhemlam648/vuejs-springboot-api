@@ -22,7 +22,8 @@ export default {
     showHeaderFooter() {
       // kiểm tra có hiển thị header và footer ở trang 
       return this.$route.path !== '/login' && this.$route.path !== '/admin'
-      && this.$route.path !== '/adminlisthr' && this.$route.path !== '/adminlistapply';
+      && this.$route.path !== '/adminlisthr' && this.$route.path !== '/adminlistapply'
+      && this.$route.path !== '/adminlistarchiteture';
     }
   }
 }

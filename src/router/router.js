@@ -8,6 +8,7 @@ import Login from '../components/Login.vue'
 import HomeAdmin from'../components/admin/HomeAdmin.vue'
 import ListHradministration from '../components/admin/ListHradministration.vue'
 import ListApply from '../components/admin/ListApply.vue'
+import ListArchiteture from '../components/admin/ListArchiteture.vue'
 const routes =[
     {
         path: '/',
@@ -58,6 +59,11 @@ const routes =[
         path:'/adminlistapply',
         name: 'ListApply',
         component: ListApply
+    },
+    {
+        path:'/adminlistarchiteture',
+        name:'ListArchiteture',
+        component:ListArchiteture
     }
 ]
 const router = createRouter({
