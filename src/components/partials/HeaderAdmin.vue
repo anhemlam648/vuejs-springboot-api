@@ -9,7 +9,7 @@
       <hr style="background-color: #FFFFFF;">
       <router-link to="/admin" class="sidebar-link" style="color: #33FFFF;">🏠 Trang Chủ</router-link>
       <router-link to="/adminlisthr" class="sidebar-link" style="color: #FFFF00;">📂 ListHrAdmin</router-link>
-      <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">📂 ListCategory</router-link>
+      <router-link to="/adminlistcategory" class="sidebar-link" style="color: #FFFF00;">📂 ListCategory</router-link>
       <router-link to="/adminlistarchiteture" class="sidebar-link" style="color: #FFFF00;">📂 ListAchiterture</router-link>
       <router-link to="/adminlistapply" class="sidebar-link" style="color: #FFFF00;">📂 ListApply</router-link>
       <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">👩‍💼 ListUser</router-link>
