@@ -12,7 +12,8 @@
       <router-link to="/adminlistcategory" class="sidebar-link" style="color: #FFFF00;">📂 ListCategory</router-link>
       <router-link to="/adminlistarchiteture" class="sidebar-link" style="color: #FFFF00;">📂 ListAchiterture</router-link>
       <router-link to="/adminlistapply" class="sidebar-link" style="color: #FFFF00;">📂 ListApply</router-link>
-      <router-link to="/admin" class="sidebar-link" style="color: #FFFF00;">👩‍💼 ListUser</router-link>
+      <router-link to="/adminlistuser" class="sidebar-link" style="color: #FFFF00;">👩‍💼 ListUser</router-link>
+       <router-link to="/admincontact" class="sidebar-link" style="color: #FFFF00;">📞 Contact</router-link>
     </nav>
     <div :class="['overlay', { 'overlay-show': isSidebarOpen }]" @click="toggleSidebar"></div>
   </div>
@@ -88,7 +89,7 @@ export default {
   padding: 15px 20px;
   text-decoration: none;
   border-radius: 5px;
-  margin-bottom: 50px; 
+  margin-bottom: 30px; 
 }
 
 .sidebar-link:last-child {

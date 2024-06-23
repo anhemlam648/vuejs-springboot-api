@@ -10,6 +10,8 @@ import ListHradministration from '../components/admin/ListHradministration.vue'
 import ListApply from '../components/admin/ListApply.vue'
 import ListArchiteture from '../components/admin/ListArchiteture.vue'
 import ListCategory from '../components/admin/ListCategory.vue'
+import ListUser from '../components/admin/ListUser.vue'
+import ContactAdmin from '../components/admin/ContactAdmin.vue'
 const routes =[
     {
         path: '/',
@@ -70,6 +72,17 @@ const routes =[
         path:'/adminlistcategory',
         name:'ListCategory',
         component:ListCategory
+    },
+    {
+        path:'/adminlistuser',
+        name:'ListUser',
+        component:ListUser
+    },
+    {
+        path:'/admincontact',
+        name: 'ContactAdmin',
+        component: ContactAdmin
+        
     }
 ]
 const router = createRouter({
