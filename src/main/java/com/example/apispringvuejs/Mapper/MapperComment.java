@@ -6,7 +6,7 @@ import com.example.apispringvuejs.Entity.HrAdministration;
 import com.example.apispringvuejs.Entity.User;
 
 public class MapperComment {
-    public Dtocomment MapToComment(Comment comment){
+    public static Dtocomment MapToCommentDto(Comment comment){
         Dtocomment dtocomment = new Dtocomment();
         dtocomment.setId(comment.getId());
         dtocomment.setContent(comment.getContent());
@@ -18,7 +18,7 @@ public class MapperComment {
         }
         return dtocomment;
     }
-    public Comment MapToDtocomment(Dtocomment dtocomment){
+    public static Comment MapDtocomment(Dtocomment dtocomment){
         Comment comment = new Comment();
         comment.setId(dtocomment.getId());
         comment.setContent(dtocomment.getContent());

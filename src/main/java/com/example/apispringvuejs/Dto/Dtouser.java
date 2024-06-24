@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Dtouser {
     private Long id;
-    private String name;
+    private String username;
     private String email;
     private String password;
     private LocalDateTime createAt;

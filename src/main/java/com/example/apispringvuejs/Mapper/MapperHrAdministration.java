@@ -5,7 +5,7 @@ import com.example.apispringvuejs.Entity.CategoryHrAdministration;
 import com.example.apispringvuejs.Entity.HrAdministration;
 
 public class MapperHrAdministration {
-    public Dtohradministration MapToHrAdministration (HrAdministration hrAdministration) {
+    public static Dtohradministration MapToDtoHrAdministration (HrAdministration hrAdministration) {
         Dtohradministration dtohradministration = new Dtohradministration();
         dtohradministration.setId(hrAdministration.getId());
         dtohradministration.setDescription(hrAdministration.getDescription());
@@ -19,7 +19,7 @@ public class MapperHrAdministration {
         dtohradministration.setUpdateAt(hrAdministration.getUpdateAt());
         return dtohradministration;
     }
-    public HrAdministration MapToDtohradministration (Dtohradministration dtohradministration){
+    public static HrAdministration MapHradministration (Dtohradministration dtohradministration){
         HrAdministration hrAdministration = new HrAdministration();
         hrAdministration.setId(dtohradministration.getId());
         hrAdministration.setContent(dtohradministration.getContent());
