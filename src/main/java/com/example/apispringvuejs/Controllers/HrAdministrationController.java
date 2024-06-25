@@ -7,15 +7,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @Controller
-@RequestMapping("/hradministration")
+@RequestMapping("/hradministrations")
 @CrossOrigin(origins = "http://localhost:3000")
 public class HrAdministrationController {
         @Autowired
@@ -29,6 +26,49 @@ public class HrAdministrationController {
                 return ResponseEntity.ok(dtohradministrationList);
             }else{
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(dtohradministrationList);
+            }
+        }
+        @PostMapping("/add")
+        @ResponseBody
+        public ResponseEntity createHradministration(@RequestBody() Dtohradministration dtohradministration){
+            boolean isSuccess = this.hrAdministrationServiceImpl.createHrAdministrationDto(dtohradministration);
+            System.out.println("GỌI" + isSuccess);
+            if(isSuccess){
+                return ResponseEntity.ok(isSuccess);
+            }
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(isSuccess);
+        }
+        @GetMapping("/hradministration/{id}")
+        @ResponseBody
+        public ResponseEntity getHradministration (@PathVariable Long id){
+            Dtohradministration dtohradministration = this.hrAdministrationServiceImpl.getHrAdministrationDtoById(id);
+            if(dtohradministration != null){
+                return ResponseEntity.ok(dtohradministration);
+            }else {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Hradministration not found");
+            }
+        }
+        @PutMapping("/update/{id}")
+        @ResponseBody
+        public ResponseEntity updateHradministration(@PathVariable Long id, @RequestBody Dtohradministration dtohradministration){
+            dtohradministration.setId(id);
+            boolean isSuccess = this.hrAdministrationServiceImpl.updateHrAdministrationDto(dtohradministration);
+            System.out.println("Gọi Update Hradministration " + isSuccess);
+            if(isSuccess){
+                return ResponseEntity.ok(isSuccess);
+            }else {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(isSuccess);
+            }
+        }
+        @DeleteMapping("/delete/{id}")
+        @ResponseBody
+        public ResponseEntity deleteHradministration (@PathVariable Long id){
+            boolean isSuccess = this.hrAdministrationServiceImpl.deleteHrAdministrationDto(id);
+            System.out.println("Gọi Delete Hradministration" + isSuccess);
+            if(isSuccess){
+                return ResponseEntity.ok(isSuccess);
+            }else {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(isSuccess);
             }
         }
 }
