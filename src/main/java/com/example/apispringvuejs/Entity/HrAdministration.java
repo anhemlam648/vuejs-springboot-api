@@ -26,7 +26,7 @@ public class HrAdministration {
     @Column(name = "content", length = 1500)
     private String content;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn (name = "category_hradministration")
     private CategoryHrAdministration categoryHrAdministration;
 

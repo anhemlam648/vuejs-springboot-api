@@ -12,8 +12,10 @@ public class MapperHrAdministration {
         dtohradministration.setTitle(hrAdministration.getTitle());
         dtohradministration.setContent(hrAdministration.getContent());
         dtohradministration.setImage(hrAdministration.getImage());
-        if (hrAdministration.getCategoryHrAdministration() != null) {
+        if (hrAdministration.getCategoryHrAdministration() != null ) {
             dtohradministration.setCategoryHrAdministration(hrAdministration.getCategoryHrAdministration().getId());
+        }else {
+            dtohradministration.setCategoryHrAdministration(null);
         }
         dtohradministration.setCreateAt(hrAdministration.getCreateAt());
         dtohradministration.setUpdateAt(hrAdministration.getUpdateAt());
@@ -28,7 +30,7 @@ public class MapperHrAdministration {
         hrAdministration.setImage(dtohradministration.getImage());
         if(dtohradministration.getCategoryHrAdministration() != null){
             CategoryHrAdministration categoryHrAdministration = new CategoryHrAdministration();
-            categoryHrAdministration.setId(dtohradministration.getId());
+            categoryHrAdministration.setId(dtohradministration.getCategoryHrAdministration());
             hrAdministration.setCategoryHrAdministration(categoryHrAdministration);
         }
         hrAdministration.setCreateAt(dtohradministration.getCreateAt());

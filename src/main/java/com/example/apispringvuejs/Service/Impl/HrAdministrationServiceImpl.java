@@ -60,7 +60,7 @@ public class HrAdministrationServiceImpl implements HrAdministrationService {
     public boolean updateHrAdministrationDto(Dtohradministration dtohradministration) {
         Optional<HrAdministration> optionalHrAdministration =this.hrAdministrationRepository.findById(dtohradministration.getId());
         if(optionalHrAdministration.isPresent()){
-            HrAdministration hrAdministration = new HrAdministration();
+            HrAdministration hrAdministration = optionalHrAdministration.get();
             hrAdministration.setDescription(dtohradministration.getDescription());
             hrAdministration.setImage(dtohradministration.getImage());
             hrAdministration.setTitle(dtohradministration.getTitle());
