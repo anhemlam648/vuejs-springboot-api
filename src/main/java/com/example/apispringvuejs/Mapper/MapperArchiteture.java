@@ -18,7 +18,7 @@ public class MapperArchiteture {
     public static Architeture MapToArchiteture (Dtoarchiteture dtoarchiteture){
         Architeture architeture = new Architeture();
         architeture.setId(dtoarchiteture.getId());
-        architeture.setTitle(architeture.getTitle());
+        architeture.setTitle(dtoarchiteture.getTitle());
         architeture.setDescription(dtoarchiteture.getDescription());
         architeture.setContent(dtoarchiteture.getContent());
         architeture.setImage(dtoarchiteture.getImage());
