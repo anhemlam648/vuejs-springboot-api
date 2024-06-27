@@ -33,6 +33,7 @@ public class CategoryServiceImpl implements CategoryService {
         if(optionalCategoryHrAdministration.isPresent()){
             CategoryHrAdministration categoryHrAdministration = optionalCategoryHrAdministration.get();
             categoryHrAdministration.setName(dtocategory.getName());
+            categoryRepository.save(categoryHrAdministration);
             return true;
         }
         return false;
