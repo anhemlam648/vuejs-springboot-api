@@ -20,11 +20,11 @@ public class Comment {
 
     private String content;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "hradministration_id")
     private HrAdministration hrAdministration;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User users;
 

@@ -4,26 +4,26 @@ import com.example.apispringvuejs.Dto.Dtoapply;
 import com.example.apispringvuejs.Entity.Apply;
 
 public class MapperApply {
-    public Dtoapply MapTotoApply (Apply apply){
-        Dtoapply dtoapply = new Dtoapply();
-        dtoapply.setId(apply.getId());
-        dtoapply.setTitle(apply.getTitle());
-        dtoapply.setContent(apply.getContent());
-        dtoapply.setDescription(apply.getDescription());
-        dtoapply.setImage(apply.getImage());
-        dtoapply.setCreateAt(apply.getCreateAt());
-        dtoapply.setUpdateAt(apply.getUpdateAt());
-        return dtoapply;
+    public static Dtoapply mapToDtoApply(Apply apply) {
+        Dtoapply dtoApply = new Dtoapply();
+        dtoApply.setId(apply.getId());
+        dtoApply.setTitle(apply.getTitle());
+        dtoApply.setContent(apply.getContent());
+        dtoApply.setDescription(apply.getDescription());
+        dtoApply.setImage(apply.getImage());
+        dtoApply.setCreateAt(apply.getCreateAt());
+        dtoApply.setUpdateAt(apply.getUpdateAt());
+        return dtoApply;
     }
-    public Apply MapToDtoApply (Dtoapply dtoapply){
+    public static Apply mapToApply(Dtoapply dtoApply) {
         Apply apply = new Apply();
-        apply.setId(dtoapply.getId());
-        apply.setTitle(dtoapply.getTitle());
-        apply.setDescription(dtoapply.getDescription());
-        apply.setContent(dtoapply.getContent());
-        apply.setImage(dtoapply.getImage());
-        apply.setCreateAt(dtoapply.getCreateAt());
-        apply.setUpdateAt(dtoapply.getUpdateAt());
+        apply.setId(dtoApply.getId());
+        apply.setTitle(dtoApply.getTitle());
+        apply.setContent(dtoApply.getContent());
+        apply.setDescription(dtoApply.getDescription());
+        apply.setImage(dtoApply.getImage());
+        apply.setCreateAt(dtoApply.getCreateAt());
+        apply.setUpdateAt(dtoApply.getUpdateAt());
         return apply;
     }
 }
