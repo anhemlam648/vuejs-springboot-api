@@ -1,6 +1,7 @@
 package com.example.apispringvuejs.Controllers;
 
 import com.example.apispringvuejs.Dto.Dtocomment;
+import com.example.apispringvuejs.Entity.Comment;
 import com.example.apispringvuejs.Service.Impl.CommentServiceImpl;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +21,10 @@ public class CommentController {
 
     @PostMapping("/add")
     private ResponseEntity<Object> createComment(@RequestBody Dtocomment dtocomment, HttpSession httpSession){
-        Long userId =(Long)httpSession.getAttribute("userId");
-        if(userId !=null){
-            return ResponseEntity.ok(userId);
-        }
+//        Long userId =(Long)httpSession.getAttribute("userId");
+//        if(userId !=null){
+//            return ResponseEntity.ok(userId);
+//        }
         boolean isSuccess = this.commentServiceImpl.createCommentDto(dtocomment);
         System.out.println("Gọi" + isSuccess);
         if(isSuccess){
@@ -33,9 +34,14 @@ public class CommentController {
         }
     }
 
-    @GetMapping("/comment/{id}")
-    private ResponseEntity<List<Dtocomment>> getCommentByHrId(@PathVariable Long id){
-            List<Dtocomment>dtocommentList =commentServiceImpl.getCommentsByHrId(id);
+    @GetMapping("/comment")
+    @ResponseBody
+    public ResponseEntity<List<Dtocomment>> GetAllComment(){
+        List<Dtocomment> dtocommentList = commentServiceImpl.getAllComment();
+        if(dtocommentList != null){
             return ResponseEntity.ok(dtocommentList);
+        }else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(dtocommentList);
+        }
     }
 }

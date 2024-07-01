@@ -8,5 +8,6 @@ import java.util.List;
 @Service
 public interface CommentService {
     boolean createCommentDto(Dtocomment dtocomment);
-    List<Dtocomment> getCommentsByHrId (Long id);
+//    List<Dtocomment> getCommentsByHrId (Long id);
+//    List<Dtocomment> getAllComment;
 }

@@ -48,9 +48,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean createUser(Dtouser dtouser) {
         User user = MapperUser.MapUser(dtouser);
-        user.setPassword(passwordEncoder.encode(dtouser.getPassword()));
+//        user.setPassword(passwordEncoder.encode(dtouser.getPassword()));
         userRepository.save(user);
-        return false;
+        return true;
     }
 
     @Override

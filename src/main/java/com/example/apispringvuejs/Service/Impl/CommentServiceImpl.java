@@ -26,11 +26,11 @@ public class CommentServiceImpl implements CommentService {
         return saveComment != null;
     }
 
-    @Override
-    public List<Dtocomment> getCommentsByHrId(Long id) {
-        List<Comment> dtocommentList =commentRepository.findByHrAdministrationId(id);
-        return dtocommentList.stream()
-                .map(MapperComment::mapToCommentDto)
+
+    public List<Dtocomment> getAllComment(){
+        List<Dtocomment> dtocommentList = this.commentRepository.findAll()
+                .stream().map(MapperComment::mapToCommentDto)
                 .collect(Collectors.toList());
+        return dtocommentList;
     }
 }
