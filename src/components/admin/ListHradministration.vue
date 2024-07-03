@@ -6,9 +6,22 @@
             <p style="text-align:center;">{{ content }}</p>
             <img :src="image" alt="hình mới" class="image" style="width:500px;">
             <ul>
-              <li v-for="hradmin in hrAdministrations" :key="hradmin.id">
-                    {{ hradmin.title }} - {{ hradmin.description }}
-                </li>
+              <table class="hradmin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="hradmin in hrAdministrations" :key="hradmin.id">
+                        <td>{{ hradmin.id }}</td>
+                        <td>{{ hradmin.title }}</td>
+                        <td>{{ hradmin.description }}</td>
+                    </tr>
+                </tbody>
+            </table>
             </ul>
         </div>
          <FooterAdmin />
@@ -78,6 +91,7 @@ export default {
   width: 95%; 
   max-width: 100%; 
    overflow: hidden;
+  margin-top:-50px;
 }
 .list-hradmin h1{
   color: #004080;
@@ -105,5 +119,26 @@ export default {
 .image{
     display:block;
     margin: 20px auto;
+}
+.hradmin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.hradmin-table th,
+.hradmin-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+.hradmin-table th {
+  background-color: #004080;
+  color: white;
+}
+.hradmin-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.hradmin-table tr:hover {
+  background-color: #ddd;
 }
 </style>
