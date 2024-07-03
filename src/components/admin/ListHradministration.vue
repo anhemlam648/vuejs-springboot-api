@@ -5,6 +5,11 @@
             <h1 style="text-align:center;">{{ title }}</h1>
             <p style="text-align:center;">{{ content }}</p>
             <img :src="image" alt="hình mới" class="image" style="width:500px;">
+            <ul>
+              <li v-for="hradmin in hrAdministrations" :key="hradmin.id">
+                    {{ hradmin.title }} - {{ hradmin.description }}
+                </li>
+            </ul>
         </div>
          <FooterAdmin />
     </div>
@@ -12,7 +17,7 @@
 <script>
 import HeaderAdmin from '../partials/HeaderAdmin';
 import FooterAdmin from '../partials/FooterAdmin';
-
+import axios from 'axios';
 export default {
         name: " ListHradministration",
         components:{
@@ -23,13 +28,22 @@ export default {
             return{
                 title:"Trang quản lý bài viết về hành chính nhân sự",
                 content:"Trang update bài viết",
-                image: "https://hanhchinhnhansu.edu.vn/wp-content/uploads/2024/06/Quan-Ly-Hanh-Chinh-Nhan-Su-min.jpg"
+                image: "https://hanhchinhnhansu.edu.vn/wp-content/uploads/2024/06/Quan-Ly-Hanh-Chinh-Nhan-Su-min.jpg",
+                hrAdministrations: []
                 };
         },
         mounted() {
             setTimeout(() =>{
                 this.image ="https://hanhchinhnhansu.edu.vn/wp-content/uploads/2024/06/Gioi-Thieu-Xu-Huong-Quan-Ly-Nhan-Su.jpg"
             },3000);
+           // Gọi API khi component được mount
+        axios.get('http://localhost:8080/hradministrations/list')
+            .then(response => {
+                this.hrAdministrations = response.data; // Lưu dữ liệu trả về vào biến hrAdministrations
+            })
+            .catch(error => {
+                console.error("There was an error!", error);
+            });
         }
 }
 </script>
