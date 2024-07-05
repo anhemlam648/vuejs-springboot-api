@@ -2,6 +2,7 @@
     <div class="home-admin">
         <HeaderAdmin />
         <div class="list-hradmin">
+         <router-link to="/addHradministration" class="sidebar-link"   style="display: inline-block; padding: 10px 20px; background-color: #004080; color: #fff; text-align: center; text-decoration: none; border-radius: 4px; width: 100px;">Thêm Bài Viết</router-link>
             <h1 style="text-align:center;">{{ title }}</h1>
             <p style="text-align:center;">{{ content }}</p>
             <ul>
@@ -67,7 +68,7 @@ export default {
         editHradmin(id) {
             axios.get(`http://localhost:8080/hradministrations/hradministration/${id}`)
                 .then(response => {
-                  const editedHradmin = response.data;
+                   const editedHradmin = response.data;
                    console.log("Đang chỉnh sửa mục với ID:", editedHradmin.id);
                 })
                 .catch(error => {

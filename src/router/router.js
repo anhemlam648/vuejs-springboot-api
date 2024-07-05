@@ -12,6 +12,7 @@ import ListArchiteture from '../components/admin/ListArchiteture.vue'
 import ListCategory from '../components/admin/ListCategory.vue'
 import ListUser from '../components/admin/ListUser.vue'
 import ContactAdmin from '../components/admin/ContactAdmin.vue'
+import addHradministration from '../components/admin/addHradministration.vue'
 const routes =[
     {
         path: '/',
@@ -83,6 +84,11 @@ const routes =[
         name: 'ContactAdmin',
         component: ContactAdmin
         
+    },
+    {
+        path:'/addHradministration',
+        name:'addHradministration',
+        component: addHradministration
     }
 ]
 const router = createRouter({

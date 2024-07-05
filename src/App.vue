@@ -24,7 +24,7 @@ export default {
     return this.$route.path !== '/login' && this.$route.path !== '/admin'
     && this.$route.path !== '/adminlisthr' && this.$route.path !== '/adminlistapply'
     && this.$route.path !== '/adminlistarchiteture' && this.$route.path !== '/adminlistuser'  && this.$route.path !== '/admincontact'
-    && this.$route.path !== '/adminlistcategory'  
+    && this.$route.path !== '/adminlistcategory'  && this.$route.path !== '/addHradministration'
     }
   }
 }
